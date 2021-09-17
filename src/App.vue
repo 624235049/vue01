@@ -42,6 +42,14 @@
     <b>Salary</b> {{emp.Salary}},<br/><br/><br/>
   </div>
 
+  <hr/>
+<div v-bind:key="std.studentId" v-for="std in students"> 
+    <b>studentId :</b> {{std.studentId}},<br/>
+    <b>firstname :</b> {{std.firstname}},<br/>
+    <b>lastname :</b> {{std.lastname}},<br/>
+    <b>score :</b> {{std.score}},<br/><br/><br/>
+  </div>
+
 
     <input v-bind:type="inputtype" />
   </div>
@@ -65,8 +73,8 @@ export default {
       counter: 0,
       htmlText: "<b>HTML TEXT</b>&nbsp;",
       isGreeting: true,
-      employees:[{"id":1,"name":"John","Salary":30000},{"id":2,"name":"Trump","Salary":10000},{"id":3,"name":"Peter","Salary":99000}]
-
+      employees:[{"id":1,"name":"John","Salary":30000},{"id":2,"name":"Trump","Salary":10000},{"id":3,"name":"Peter","Salary":99000}],
+      students:[{"studentId":624235049,"firstname": "Suban","lastname":"Noksang","score":"100"},{"studentId":624235048,"firstname": "Warinthon","lastname":"kongjan","score":"100"},{"studentId":624235043,"firstname": "Natthawut","lastname":"Bunwisoot","score":"100"},{"studentId":624235043,"firstname": "Pathipan","lastname":"Siriwathano","score":"100"}]
     }  
   },
   methods: {
